@@ -137,3 +137,7 @@ autocmd FileType javascript let b:syntastic_checkers = findfile('.jshintrc', '.;
 
 " show filename
 set statusline+=%F
+
+" Adding timestamps with FN+F10
+nnoremap <F10> "=strftime("%FT%T%z")<CR>P
+inoremap <F10> <C-R>=strftime("%FT%T%z")<CR>
