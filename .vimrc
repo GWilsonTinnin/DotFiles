@@ -28,6 +28,8 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/syntastic'
+Bundle 'vim-ruby/vim-ruby'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -139,5 +141,11 @@ autocmd FileType javascript let b:syntastic_checkers = findfile('.jshintrc', '.;
 set statusline+=%F
 
 " Adding timestamps with FN+F10
-nnoremap <F10> "=strftime("%FT%T%z")<CR>P
-inoremap <F10> <C-R>=strftime("%FT%T%z")<CR>
+nnoremap <F12> "=strftime("%FT%T%z")<CR>P
+inoremap <F12> <C-R>=strftime("%FT%T%z")<CR>
+
+set spell spelllang=en_us
+
+set clipboard=unnamed
+
+let g:NERDTreeNodeDelimiter = "\u00a0"
